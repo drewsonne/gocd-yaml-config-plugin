@@ -2,6 +2,7 @@
   "target_version": 1,
   "errors": [],
   "environments": [],
+  "templates": [],
   "pipelines": [
     {
       "location": "simple.gocd.yaml",

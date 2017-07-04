@@ -16,14 +16,10 @@ public class TemplateTransform {
 
     private static final String YAML_TEMPLATE_STAGES_FIELD = "stages";
 
-    private final MaterialTransform materialTransform;
     private final StageTransform stageTransform;
-    private final EnvironmentVariablesTransform variablesTransform;
 
-    public TemplateTransform(MaterialTransform materialTransform, StageTransform stageTransform, EnvironmentVariablesTransform variablesTransform) {
-        this.materialTransform = materialTransform;
+    public TemplateTransform(StageTransform stageTransform) {
         this.stageTransform = stageTransform;
-        this.variablesTransform = variablesTransform;
     }
 
     public JsonObject transform(Object maybeTemplate) {

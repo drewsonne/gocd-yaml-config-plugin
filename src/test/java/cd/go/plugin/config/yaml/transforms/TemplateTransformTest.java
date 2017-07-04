@@ -16,16 +16,12 @@ import static org.mockito.Mockito.mock;
 public class TemplateTransformTest {
 
     private TemplateTransform parser;
-    private MaterialTransform materialTransform;
     private StageTransform stageTransform;
-    private EnvironmentVariablesTransform environmentTransform;
 
     @Before
     public void SetUp() {
-        materialTransform = mock(MaterialTransform.class);
         stageTransform = mock(StageTransform.class);
-        environmentTransform = mock(EnvironmentVariablesTransform.class);
-        parser = new TemplateTransform(materialTransform, stageTransform, environmentTransform);
+        parser = new TemplateTransform(stageTransform);
     }
 
     @Test

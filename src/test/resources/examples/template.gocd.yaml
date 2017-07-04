@@ -15,7 +15,7 @@ pipelines:
                    command: make
 templates:
   template1:
-    states:
+    stages:
       - template-build:
           jobs:
             template-build:

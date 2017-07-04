@@ -18,12 +18,14 @@ public class RootTransformTest {
     private RootTransform rootTransform;
     private PipelineTransform pipelineTransform;
     private EnvironmentsTransform environmentsTransform;
+    private TemplateTransform templatesTransform;
 
     @Before
     public void Setup() {
         pipelineTransform = mock(PipelineTransform.class);
         environmentsTransform = mock(EnvironmentsTransform.class);
-        rootTransform = new RootTransform(pipelineTransform, environmentsTransform);
+        templatesTransform = mock(TemplateTransform.class);
+        rootTransform = new RootTransform(pipelineTransform, environmentsTransform, templatesTransform);
     }
 
     @Test

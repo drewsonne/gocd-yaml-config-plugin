@@ -9,6 +9,7 @@ public class JsonConfigCollection {
     private JsonObject mainObject = new JsonObject();
     private JsonArray environments = new JsonArray();
     private JsonArray pipelines = new JsonArray();
+    private JsonArray templates = new JsonArray();
     private JsonArray errors = new JsonArray();
 
     public JsonConfigCollection() {
@@ -17,7 +18,14 @@ public class JsonConfigCollection {
         mainObject.add("target_version", new JsonPrimitive(TARGET_VERSION));
         mainObject.add("environments", environments);
         mainObject.add("pipelines", pipelines);
+        mainObject.add("templates", templates);
         mainObject.add("errors", errors);
+    }
+
+    protected  JsonArray getTemplates() { return templates; }
+
+    public void addTemplate(JsonElement template, String location) {
+        templates.add(template);
     }
 
     protected JsonArray getEnvironments() {
