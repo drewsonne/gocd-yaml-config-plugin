@@ -25,7 +25,7 @@ public class TemplateTransformTest {
         materialTransform = mock(MaterialTransform.class);
         stageTransform = mock(StageTransform.class);
         environmentTransform = mock(EnvironmentVariablesTransform.class);
-        parser = new PipelineTransform(materialTransform, stageTransform, environmentTransform);
+        parser = new TemplateTransform(materialTransform, stageTransform, environmentTransform);
     }
 
     @Test
